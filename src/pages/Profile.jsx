@@ -12,6 +12,7 @@ function Profile() {
 
     useEffect(()=>{
         SetInterests(user.interests)
+        console.log("new")
         if(user) setLoading(false)
     },[user])
   return (
