@@ -6,7 +6,7 @@ import { server_ip } from '../ip';
 const Login = () => {
   const loginwithgoogle = ()=>{
     console.log(server_ip)
-    window.open(`http://${server_ip}/auth/google`,"_self")
+    window.open(`${server_ip}/auth/google`,"_self")
 }
   return (
     <div className="min-h-screen flex items-center justify-center bg-cover bg-no-repeat" style={{backgroundImage: `url(${loginBackground})`}}>

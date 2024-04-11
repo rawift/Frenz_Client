@@ -6,7 +6,7 @@ import { ChatMatch } from "../components/ChatMatch/ChatMatch"
 import { Convo } from '../components/Convo/Convo';
 import { Loader } from '../components/Loader/Loader';
 import Bottom from '../components/Bottom/Bottom';
-import { server_ip } from '../ip';
+import { server_ip, socket_ip } from '../ip';
 
 
 const ChatList = () => {
@@ -29,7 +29,7 @@ const ChatList = () => {
 
 
   useEffect(() => {
-    socket.current = io("http://localhost:8800")
+    socket.current = io(`${socket_ip}`)
     socket.current.emit("new-user-add", user._id)
     socket.current.on("get-users", (users) => {
     
