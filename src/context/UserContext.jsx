@@ -12,7 +12,7 @@ export const UserProvider = ({children}) => {
       const fetchData = async () => {
         try {
           // First API call
-          const response = await axios.get("http://localhost:8000/user/profile", { withCredentials: true });
+          const response = await axios.get("https://www.frenz.top/user/profile", { withCredentials: true });
           setUser(response.data)
         } catch (error) {
           console.error('Error fetching data:', error);

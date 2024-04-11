@@ -7,7 +7,7 @@ import axios from 'axios';
 import Bottom from '../components/Bottom/Bottom';
 import Bott from '../components/Bottom/Bott';
 
-
+import { server_ip } from '../ip';
 
 
 
@@ -45,7 +45,7 @@ function Form() {
       };
       if(user.gender) userData.gender=user.gender
     try {
-        const response = await axios.post('http://localhost:8000/user/details',userData, {
+        const response = await axios.post(`${server_ip}/user/details`,userData, {
           withCredentials: true, 
         });
         if(response.data.success) alert("successfully updated")

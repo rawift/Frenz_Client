@@ -1,10 +1,12 @@
 import React from 'react'
 import loginBackground from '../images/login_background.jpg';
 //import "./Login.css"
+import { server_ip } from '../ip';
 
 const Login = () => {
   const loginwithgoogle = ()=>{
-    window.open("http://localhost:8000/auth/google","_self")
+    console.log(server_ip)
+    window.open(`http://${server_ip}/auth/google`,"_self")
 }
   return (
     <div className="min-h-screen flex items-center justify-center bg-cover bg-no-repeat" style={{backgroundImage: `url(${loginBackground})`}}>

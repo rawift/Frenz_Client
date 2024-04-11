@@ -6,6 +6,7 @@ import { ChatMatch } from "../components/ChatMatch/ChatMatch"
 import { Convo } from '../components/Convo/Convo';
 import { Loader } from '../components/Loader/Loader';
 import Bottom from '../components/Bottom/Bottom';
+import { server_ip } from '../ip';
 
 
 const ChatList = () => {
@@ -49,7 +50,7 @@ const ChatList = () => {
   useEffect(()=>{
     const fetchData = async () => {
       try{
-        const response = await axios.get(`http://localhost:8000/chat/${user._id}`, { withCredentials: true });
+        const response = await axios.get(`${server_ip}/chat/${user._id}`, { withCredentials: true });
         setChats(response.data)
         setLoading(false)
 

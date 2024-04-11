@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { Loader } from '../components/Loader/Loader';
 import loginBackground from '../images/login_background.jpg';
 import Bottom from '../components/Bottom/Bottom';
+import { server_ip } from '../ip';
 
 const OthersProfile = () => {
 
@@ -15,7 +16,7 @@ const OthersProfile = () => {
       const fetchData = async () => {
         try {
           // First API call
-          const response = await axios.get(`http://localhost:8000/user/${userId}`, { withCredentials: true });
+          const response = await axios.get(`${server_ip}/user/${userId}`, { withCredentials: true });
           setUser(response.data)
           SetInterests(response.data.interests)
           setLoading(false)

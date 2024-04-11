@@ -1,0 +1,1 @@
+export const server_ip = "https://www.frenz.top"

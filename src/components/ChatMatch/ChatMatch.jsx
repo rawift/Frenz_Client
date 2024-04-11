@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import {format} from "timeago.js"
 import { Link } from 'react-router-dom';
+import { server_ip } from '../../ip';
 
 export const ChatMatch = ({data, currentUser, online}) => {
 
@@ -15,7 +16,7 @@ export const ChatMatch = ({data, currentUser, online}) => {
      
     const fetchData = async () => {
       try{
-        const response = await axios.get(`http://localhost:8000/user/${userId}`, { withCredentials: true });
+        const response = await axios.get(`${server_ip}/user/${userId}`, { withCredentials: true });
 
         setUserData(response.data)
       } catch (error) {
@@ -28,7 +29,7 @@ export const ChatMatch = ({data, currentUser, online}) => {
 
       const fetchData = async () => {
         try{
-          const response = await axios.get(`http://localhost:8000/message/recent/${data._id}`, { withCredentials: true });
+          const response = await axios.get(`${server_ip}/message/recent/${data._id}`, { withCredentials: true });
   
           setRecentMessage(response.data)
         } catch (error) {

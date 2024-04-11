@@ -5,6 +5,7 @@ import InputEmoji from 'react-input-emoji'
 import { Loader } from '../Loader/Loader';
 import { FcPrevious } from "react-icons/fc";
 import { Link } from 'react-router-dom';
+import { server_ip } from '../../ip';
 
 
 export const Convo = ({chat, currentUser, setSendMessage, recieveMessage, currentUserImage, online, setCurrentChat}) => {
@@ -31,7 +32,7 @@ export const Convo = ({chat, currentUser, setSendMessage, recieveMessage, curren
           const userId = chat?.members?.find((id)=>id!=currentUser)
           const fetchData = async () => {
               try{
-                const response = await axios.get(`http://localhost:8000/user/${userId}`, { withCredentials: true });
+                const response = await axios.get(`${server_ip}/user/${userId}`, { withCredentials: true });
   
                 setUserData(response.data)
               } catch (error) {
@@ -44,7 +45,7 @@ export const Convo = ({chat, currentUser, setSendMessage, recieveMessage, curren
       useEffect(() => {
           const fetchMessages = async () => {
               try {
-                  const {data} = await axios.get(`http://localhost:8000/message/${chat._id}`)
+                  const {data} = await axios.get(`${server_ip}/message/${chat._id}`)
                   setMessages(data)
                   setLoading(false)
               } catch (error) {
@@ -72,7 +73,7 @@ export const Convo = ({chat, currentUser, setSendMessage, recieveMessage, curren
   
         const fetchData = async () => {
           try {
-            const { data } = await axios.post('http://localhost:8000/message/add', message, { withCredentials: true });
+            const { data } = await axios.post(`${server_ip}/message/add`, message, { withCredentials: true });
        
             setMessages([...messages, data])
             setNewMessage("")
