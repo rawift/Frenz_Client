@@ -6,7 +6,7 @@ import {io} from "socket.io-client"
 import Peer from 'simple-peer';
 import loginBackground from '../images/login_background.jpg';
 import Bottom from '../components/Bottom/Bottom';
-
+import { socket_ip2 } from '../ip';
 
 
 
@@ -27,7 +27,7 @@ const Connecting = () => {
 
   
 useEffect(() => {
-  socket.current = io("http://localhost:8080")
+  socket.current = io(`${socket_ip2}`)
 
 },[])
 

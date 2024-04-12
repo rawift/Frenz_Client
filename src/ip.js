@@ -1,2 +1,5 @@
-export const server_ip = "https://www.frenz.top"
-export const socket_ip = "http://13.202.18.25:8800"
+export const server_ip = "https://www.frenz.top/server1"
+export const socket_ip = "https://www.frenz.top/server2"
+export const socket_ip2 = "hhttps://www.frenz.top/server3"
+
+
