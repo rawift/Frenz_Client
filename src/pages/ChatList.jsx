@@ -42,7 +42,7 @@ const ChatList = () => {
   useEffect(() => {
 
     socket.current.on("recieve-message", (data) => {
-
+      console.log("recieve data", data)
       setRecieveMessage(data)
 
     })
