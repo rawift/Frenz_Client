@@ -60,7 +60,7 @@ function Profile() {
 export default Profile;*/
 
 
-/*import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../context/UserContext';
 import Bottom from '../components/Bottom/Bottom';
 import loginBackground from '../images/login_background.jpg';
@@ -144,8 +144,8 @@ function Profile() {
     );
 }
 
-export default Profile;*/
-import React from 'react';
+export default Profile;
+/*import React from 'react';
 import { Link } from 'react-router-dom';
 import buttonImage5 from '../images/instagram.png';
 import Bottom from '../components/Bottom/Bottom';
@@ -197,4 +197,4 @@ const Info = () => {
   );
 };
 
-export default Info;
+export default Info;*/

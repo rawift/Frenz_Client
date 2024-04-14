@@ -87,8 +87,6 @@ const Info = () => {
           <p>Sometimes chats may not be in real-time, relogin/reload to resolve</p>
           <a href='https://forms.gle/EQgbdEizsfCiohPU8'>Delete Account Click on me!</a>
 
-          {/* Add a two-line gap */}
-          <div style={{ height: "2rem" }}></div>
 
           <h2 className="text-2xl font-bold mb-4">Developed by</h2>
           <ul>
@@ -104,7 +102,7 @@ const Info = () => {
               <div>
                 Prem Singh
               </div>
-              <a href="https://www.instagram.com/._p.r.e.m._/">
+              <a href="https://www.instagram.com/.p.r.e.m./">
                 <img src={buttonImage5} className='w-10 mx-2' alt="Icon" />
               </a>
             </li>
@@ -116,5 +114,4 @@ const Info = () => {
   );
 };
 
-export default Info;
-
+export default Info;
