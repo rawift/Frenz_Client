@@ -9,17 +9,21 @@ const Info = () => {
     <div className="bg-black h-screen text-white">
       <div className="w-100 p-8">
         <div>
-          <h2 className="text-2xl font-bold mb-4">About app(Owner is single from past few years, You will not)</h2>
+          <h2 className="text-2xl font-bold mb-4">About app</h2>
           
             <p>New matches automatically made eveyday at 9 AM </p>
-            <p>You must submit the form to get the matches ( Gender cant't be updated )</p>
+            <p>You must submit the form to get the matches ( Gender cant't be updated ) Refresh after submission</p>
             <p>Use voice to instantly talk to a random match.</p>
             <p>Chats automatically gets deleted at 9 AM </p>
-            <p>App is running in Beta version</p>
-            <p>App is not responsive  (laptop recomended)</p>
+            <p>App is running in Beta version bug and glitches are there</p>
+            <p>App is not responsive (Install react-app from browser by click on three dots)</p>
            <Link to={`/login`}> <p>If any bug occur , relogin by clicking on me!</p> </Link>
            <p>New features coming soon</p>
            <p>Let me know any recommendation from you guys</p>
+           <p>Please be respectful towards each other on both chats and audio call</p>
+           <p>Allow the audio permission to use Voice</p>
+           <p>Sometime chates may not be in real time, relogin/reload to resolve</p>
+           <a href='https://forms.gle/EQgbdEizsfCiohPU8'>Delete Account Click on me!</a>
          
         </div>
       </div>
